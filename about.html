@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adv Nitika Naveen</title>
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+    <ion-icon name="moon-outline" id="themeIcon"></ion-icon>
+  </button>
+
+  <main>
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/nitika_naveen.jpg" alt="Adv. Nitika Naveen" width="80" style="border-radius:50%;object-fit:cover;">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Adv. Nitika Naveen">Adv. Nitika Naveen</h1>
+          <p class="title">Advocate & Legal Professional</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:nitikanaveen123@gmail.com" class="contact-link" style="white-space: normal; word-break: break-all;">nitikanaveen123@gmail.com</a>
+            </div>
+          </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/adv-nitika-naveen-339285186/" class="social-link" target="_blank" rel="noopener">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div class="main-content">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a class="navbar-link" href="home.html">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link active" href="about.html">About</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="resume.html">Resume</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="blog.html">Blog</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <article class="home active" data-page="home">
+        <header>
+          <h2 class="h2 article-title">About</h2>
+        </header>
+        <section class="about-section" style="display: flex; align-items: flex-start; gap: 32px;">
+          <div class="about-photo" style="flex: 0 0 300px;">
+            <img src="./assets/images/Nitika1.png" alt="Adv. Nitika Naveen" style="width: 100%; height: auto; border-radius: 16px; box-shadow: var(--shadow-2);">
+          </div>
+          <div class="about-bio" style="flex: 1;">
+            <p>Adv. Nitika Naveen is a dedicated legal professional with experience across multiple law firms and a passion for justice. She has worked in courts in Pune and is always eager to take on new challenges in the legal field.</p>
+            <p>Her expertise spans legal consultation, court representation, contract drafting, and compliance advisory. Nitika is known for her integrity, attention to detail, and commitment to her clients.</p>
+            <p>She continues to expand her knowledge and skills, aiming to make a positive impact in the legal profession and beyond.</p>
+          </div>
+        </section>
+        <section class="gallery">
+          <h1>Gallery</h1>
+        </section>
+        
+        <section class="video-section" style="margin-top: 40px;">
+          <h3 class="h3" style="margin-bottom: 20px;">Featured Video</h3>
+          
+          <div class="video-container" style="max-width: 800px; margin: 0 auto;">
+            <video 
+              src="./assets/Video/LLM.mp4" 
+              autoplay 
+              loop 
+              muted 
+              style="width: 100%; height: auto; border-radius: 16px; box-shadow: var(--shadow-2);"
+              controls>
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p style="color: var(--light-gray); margin-bottom: 20px; text-align: center; font-size: var(--fs-5);">
+            LLM (Master of Laws) degree graduation ceremony at University of Westminster, London, UK
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  <!-- Theme Toggle Script -->
+  <script>
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
+    
+    // Check for saved theme preference or default to dark
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    body.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+    
+    // Toggle theme function
+    function toggleTheme() {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    }
+    
+    // Update icon based on theme
+    function updateThemeIcon(theme) {
+      if (theme === 'light') {
+        themeIcon.setAttribute('name', 'sunny-outline');
+      } else {
+        themeIcon.setAttribute('name', 'moon-outline');
+      }
+    }
+    
+    // Event listener
+    themeToggle.addEventListener('click', toggleTheme);
+  </script>
+</body>
+</html> 

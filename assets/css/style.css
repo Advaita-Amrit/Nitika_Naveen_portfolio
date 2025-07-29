@@ -2612,7 +2612,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   cursor: pointer;
   box-shadow: -2px 4px 12px hsla(0, 0%, 0%, 0.15);
   z-index: 1;
-  min-width: 350px;
+  min-width: 300px;
   width: fit-content;
 }
 

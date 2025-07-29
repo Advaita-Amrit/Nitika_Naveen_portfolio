@@ -2575,14 +2575,14 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
   
   .contact-link-wrapper {
-    min-width: 250px;
+    min-width: 320px;
     padding: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .contact-link-wrapper {
-    min-width: 200px;
+    min-width: 280px;
     padding: 10px;
     gap: 10px;
   }
@@ -2612,14 +2612,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   cursor: pointer;
   box-shadow: -2px 4px 12px hsla(0, 0%, 0%, 0.15);
   z-index: 1;
-  min-width: 300px;
+  min-width: 350px;
   width: fit-content;
 }
 
 .contact-link-wrapper .contact-link {
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .contact-link-wrapper::before {

@@ -2557,6 +2557,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: var(--orange-yellow-crayola);
 }
 
+[data-theme="light"] .contact-link-wrapper:hover ion-icon {
+  color: var(--orange-yellow-crayola);
+}
+
 /* Responsive Footer */
 @media (max-width: 768px) {
   .footer-content {
@@ -2611,6 +2615,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: var(--orange-yellow-crayola);
 }
 
-.contact-link-wrapper:hover .icon-box {
-  background: var(--bg-gradient-yellow-1);
+.contact-link-wrapper:hover ion-icon {
+  color: var(--orange-yellow-crayola);
 }

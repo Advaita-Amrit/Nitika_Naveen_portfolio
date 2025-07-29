@@ -84,7 +84,7 @@
           <ul class="service-list">
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/lawyer-modified.png" alt="Legal Consultation icon" width="40">
+                <img src="./assets/images/lawyer-modified.png" data-light-src="./assets/images/lawyer.png" alt="Legal Consultation icon" width="40">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Legal Consultation</h4>
@@ -95,7 +95,7 @@
             </li>
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/court-modified.png" alt="Court Representation icon" width="40">
+                <img src="./assets/images/court-modified.png" data-light-src="./assets/images/court.png" alt="Court Representation icon" width="40">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Court Representation</h4>
@@ -106,18 +106,18 @@
             </li>
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/contract-modified.png" alt="Contract Drafting icon" width="40">
+                <img src="./assets/images/contract-modified.png" data-light-src="./assets/images/contract.png" alt="Contract Drafting icon" width="40">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Contract Drafting & Review</h4>
                 <p class="service-item-text">
-                  Drafting, reviewing, and negotiating contracts and legal documents to protect clients’ interests.
+                  Drafting, reviewing, and negotiating contracts and legal documents to protect clients' interests.
                 </p>
               </div>
             </li>
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/insurance-modified.png" alt="Compliance Advisory icon" width="40">
+                <img src="./assets/images/insurance-modified.png" data-light-src="./assets/images/insurance.png" alt="Compliance Advisory icon" width="40">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Compliance & Regulatory Advisory</h4>
@@ -239,6 +239,7 @@
     const currentTheme = localStorage.getItem('theme') || 'dark';
     body.setAttribute('data-theme', currentTheme);
     updateThemeIcon(currentTheme);
+    updateServiceImages(currentTheme);
     
     // Toggle theme function
     function toggleTheme() {
@@ -248,6 +249,7 @@
       body.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
       updateThemeIcon(newTheme);
+      updateServiceImages(newTheme);
     }
     
     // Update icon based on theme
@@ -257,6 +259,27 @@
       } else {
         themeIcon.setAttribute('name', 'moon-outline');
       }
+    }
+    
+    // Update service images based on theme
+    function updateServiceImages(theme) {
+      const serviceImages = document.querySelectorAll('.service-icon-box img[data-light-src]');
+      
+      serviceImages.forEach(img => {
+        if (theme === 'light') {
+          // Store original src as data attribute if not already stored
+          if (!img.hasAttribute('data-dark-src')) {
+            img.setAttribute('data-dark-src', img.src);
+          }
+          // Switch to light mode image
+          img.src = img.getAttribute('data-light-src');
+        } else {
+          // Switch back to dark mode image
+          if (img.hasAttribute('data-dark-src')) {
+            img.src = img.getAttribute('data-dark-src');
+          }
+        }
+      });
     }
     
     // Event listener

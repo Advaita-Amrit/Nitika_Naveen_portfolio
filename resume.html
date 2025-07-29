@@ -112,13 +112,13 @@
         <div class="separator"></div>
         <ul class="contacts-list">
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-              <a href="mailto:nitikanaveen123@gmail.com" class="contact-link" style="white-space: normal; word-break: break-all;">nitikanaveen123@gmail.com</a>
-            </div>
+            <a href="mailto:nitikanaveen123@gmail.com" class="contact-link-wrapper" style="display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit;">
+              <ion-icon name="mail-outline" style="font-size: 20px; color: var(--orange-yellow-crayola);"></ion-icon>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+                <span class="contact-link">nitikanaveen123@gmail.com</span>
+              </div>
+            </a>
           </li>
         </ul>
         <div class="separator"></div>
@@ -202,149 +202,36 @@
     // Event listener
     themeToggle.addEventListener('click', toggleTheme);
   </script>
-
-
-
-
-  <!-- Theme Toggle Button
-  <button class="theme-toggle" id="themeToggle" title="Toggle theme">
-    <ion-icon name="moon-outline" id="themeIcon"></ion-icon>
-  </button>
-
-  <main>
-  <div class="lawyer-loader" id="lawyerLoader">
-    ⚖️
-    <div class="text">Preparing your case…</div>
-  </div>
-  <nav class="navbar">
-    <ul class="navbar-list">
-      <li class="navbar-item">
-        <a class="navbar-link" href="home.html">Home</a>
-      </li>
-      <li class="navbar-item">
-        <a class="navbar-link" href="about.html">About</a>
-      </li>
-      <li class="navbar-item">
-        <a class="navbar-link active" href="resume.html">Resume</a>
-      </li>
-      <li class="navbar-item">
-        <a class="navbar-link" href="blog.html">Blog</a>
-      </li>
-      <li class="navbar-item">
-        <a class="navbar-link" href="contact.html">Contact</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="resume-container" id="resumeContent" style="display:none;">
-    <h1 class="resume-title">Adv. Nitika Naveen</h1>
-    <h2 class="resume-subtitle">Resume</h2>
-    <div class="resume-btns">
-      <a href="assets/Nitika_Naveen_Resume.pdf" download class="form-btn">Download PDF</a>
-      <a href="index.html" class="form-btn">Back to Home</a>
-    </div>
-    <div class="resume-section-title">Education</div>
-    <ul class="resume-list">
-      <li>
-        <strong>LLM, International Commercial Law</strong> – University of Westminster (2024–2025)<br>
-        Merit. Advanced knowledge in international business law.
-      </li>
-      <li>
-        <strong>B.A. LL.B</strong> – Savitribai Phule Pune University<br>
-        Learned the fundamentals of arts and law.
-      </li>
-    </ul>
-    <div class="resume-section-title">Experience</div>
-    <ul class="resume-list">
-      <li><strong>Oxford Royale</strong> (Jul 2025 – Present)</li>
-      <li><strong>Currys plc</strong> (Nov 2024 – Present)</li>
-      <li><strong>Reeds Solicitors</strong> (Jul 2024 – Dec 2024)</li>
-      <li><strong>NMNP & Associates LLP</strong> (Sep 2023 – Jul 2024)</li>
-      <li><strong>Envisionard</strong> (Apr 2022 – Sep 2023)</li>
-      <li><strong>Nehru & Co</strong> (Jan 2022 – Apr 2022)</li>
-      <li><strong>Om Chambers</strong> (Feb 2020 – Jun 2020)</li>
-      <li><strong>Mvkini & Company Advocates & Solicitor</strong> (Mar 2019 – Apr 2019)</li>
-      <li><strong>Mahindra Finance</strong> (May 2019 – Jul 2019)</li>
-    </ul>
-  </div>
-  <style>
-    .lawyer-loader {
-      font-size: 48px;
-      text-align: center;
-      animation: tilt 2s ease-in-out infinite;
-      transform-origin: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: var(--smoky-black);
-      color: var(--orange-yellow-crayola);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-    .lawyer-loader .text {
-      font-size: 16px;
-      margin-top: 10px;
-      color: var(--orange-yellow-crayola);
-      font-family: serif;
-    }
-    @keyframes tilt {
-      0% { transform: rotate(0deg); }
-      25% { transform: rotate(3deg); }
-      50% { transform: rotate(0deg); }
-      75% { transform: rotate(-3deg); }
-      100% { transform: rotate(0deg); }
-    }
-  </style>
-  <script>
-    window.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
-        document.getElementById('lawyerLoader').style.display = 'none';
-        document.getElementById('resumeContent').style.display = '';
-      }, 2000);
-    });
-  </script>
-  </main>
-  <script src="./assets/js/script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   
-  <!-- Theme Toggle Script -->
-  <script>
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const body = document.body;
-    
-    // Check for saved theme preference or default to dark
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    body.setAttribute('data-theme', currentTheme);
-    updateThemeIcon(currentTheme);
-    
-    // Toggle theme function
-    function toggleTheme() {
-      const currentTheme = body.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      
-      body.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      updateThemeIcon(newTheme);
-    }
-    
-    // Update icon based on theme
-    function updateThemeIcon(theme) {
-      if (theme === 'light') {
-        themeIcon.setAttribute('name', 'sunny-outline');
-      } else {
-        themeIcon.setAttribute('name', 'moon-outline');
-      }
-    }
-    
-    // Event listener
-    themeToggle.addEventListener('click', toggleTheme);
-  </script> -->
+  <!-- Footer -->
+  <footer class="footer" style="background: var(--eerie-black-1); padding: 20px 0; margin-top: 40px; border-top: 1px solid var(--jet);">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <p style="color: var(--light-gray); margin-bottom: 15px; font-size: 14px;">
+        Crafted with ❤️ by Advaita Amrit
+      </p>
+      <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+        <a href="mailto:advaitaamrit@gmail.com" style="color: var(--orange-yellow-crayola); text-decoration: none; display: flex; align-items: center; gap: 5px;">
+          <ion-icon name="mail-outline" style="font-size: 18px;"></ion-icon>
+          <span style="font-size: 14px;">advaitaamrit@gmail.com</span>
+        </a>
+        <a href="https://linkedin.com/in/advaita-amrit/" target="_blank" rel="noopener" style="color: var(--orange-yellow-crayola); text-decoration: none; display: flex; align-items: center; gap: 5px;">
+          <ion-icon name="logo-linkedin" style="font-size: 18px;"></ion-icon>
+          <span style="font-size: 14px;">LinkedIn</span>
+        </a>
+        <a href="https://github.com/Advaita-Amrit" target="_blank" rel="noopener" style="color: var(--orange-yellow-crayola); text-decoration: none; display: flex; align-items: center; gap: 5px;">
+          <ion-icon name="logo-github" style="font-size: 18px;"></ion-icon>
+          <span style="font-size: 14px;">GitHub</span>
+        </a>
+      </div>
+      <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--jet);">
+        <p style="color: var(--light-gray); font-size: 12px; margin: 0;">
+          © 2025 Adv. Nitika Naveen. All rights reserved.
+        </p>
+        <p style="color: var(--light-gray); font-size: 12px; margin: 5px 0 0 0;">
+          Contact Information: nitikanaveen123@gmail.com | London, United Kingdom
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html> 

@@ -36,13 +36,13 @@
         <div class="separator"></div>
         <ul class="contacts-list">
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-              <a href="mailto:nitikanaveen123@gmail.com" class="contact-link" style="white-space: normal; word-break: break-all;">nitikanaveen123@gmail.com</a>
-            </div>
+            <a href="mailto:nitikanaveen123@gmail.com" class="contact-link-wrapper" style="display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit;">
+              <ion-icon name="mail-outline" style="font-size: 20px; color: var(--orange-yellow-crayola);"></ion-icon>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+                <span class="contact-link">nitikanaveen123@gmail.com</span>
+              </div>
+            </a>
           </li>
         </ul>
         <div class="separator"></div>
@@ -233,5 +233,36 @@
     // Event listener
     themeToggle.addEventListener('click', toggleTheme);
   </script>
+  
+  <!-- Footer -->
+  <footer class="footer" style="background: var(--eerie-black-1); padding: 20px 0; margin-top: 40px; border-top: 1px solid var(--jet);">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <p style="color: var(--light-gray); margin-bottom: 15px; font-size: 14px;">
+        Crafted with ❤️ by Advaita Amrit
+      </p>
+      <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+        <a href="mailto:advaitaamrit@gmail.com" style="color: var(--orange-yellow-crayola); text-decoration: none; display: flex; align-items: center; gap: 5px;">
+          <ion-icon name="mail-outline" style="font-size: 18px;"></ion-icon>
+          <span style="font-size: 14px;">advaitaamrit@gmail.com</span>
+        </a>
+        <a href="https://linkedin.com/in/advaita-amrit/" target="_blank" rel="noopener" style="color: var(--orange-yellow-crayola); text-decoration: none; display: flex; align-items: center; gap: 5px;">
+          <ion-icon name="logo-linkedin" style="font-size: 18px;"></ion-icon>
+          <span style="font-size: 14px;">LinkedIn</span>
+        </a>
+        <a href="https://github.com/Advaita-Amrit" target="_blank" rel="noopener" style="color: var(--orange-yellow-crayola); text-decoration: none; display: flex; align-items: center; gap: 5px;">
+          <ion-icon name="logo-github" style="font-size: 18px;"></ion-icon>
+          <span style="font-size: 14px;">GitHub</span>
+        </a>
+      </div>
+      <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--jet);">
+        <p style="color: var(--light-gray); font-size: 12px; margin: 0;">
+          © 2025 Adv. Nitika Naveen. All rights reserved.
+        </p>
+        <p style="color: var(--light-gray); font-size: 12px; margin: 5px 0 0 0;">
+          Contact Information: nitikanaveen123@gmail.com | London, United Kingdom
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html> 

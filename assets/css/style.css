@@ -2542,7 +2542,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 [data-theme="light"] .footer-social a:hover {
-  color: #495057;
+  color: var(--orange-yellow-crayola);
+}
+
+[data-theme="light"] .contact-link-wrapper:hover {
+  background: var(--bg-gradient-jet);
+}
+
+[data-theme="light"] .contact-link-wrapper:hover .contact-link {
+  color: var(--orange-yellow-crayola);
 }
 
 /* Responsive Footer */
@@ -2557,4 +2565,36 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 15px;
     text-align: center;
   }
+}
+
+.contact-info .contact-link {
+  color: var(--light-gray-70);
+  font-size: var(--fs-6);
+  transition: var(--transition-1);
+}
+
+.contact-link-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+  border-radius: 8px;
+  transition: var(--transition-1);
+  cursor: pointer;
+}
+
+.contact-link-wrapper:hover {
+  background: var(--bg-gradient-jet);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-1);
+}
+
+.contact-link-wrapper:hover .contact-link {
+  color: var(--orange-yellow-crayola);
+}
+
+.contact-link-wrapper:hover .icon-box {
+  background: var(--bg-gradient-yellow-1);
 }

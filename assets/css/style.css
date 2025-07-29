@@ -2545,8 +2545,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: var(--orange-yellow-crayola);
 }
 
-[data-theme="light"] .contact-link-wrapper:hover {
-  background: var(--bg-gradient-jet);
+[data-theme="light"] .contact-link-wrapper {
+  background: var(--border-gradient-onyx);
+}
+
+[data-theme="light"] .contact-link-wrapper::before {
+  background: var(--eerie-black-1);
 }
 
 [data-theme="light"] .contact-link-wrapper:hover .contact-link {
@@ -2574,21 +2578,33 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .contact-link-wrapper {
+  position: relative;
+  background: var(--border-gradient-onyx);
   display: flex;
   align-items: center;
   gap: 15px;
   text-decoration: none;
   color: inherit;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 15px;
+  border-radius: 14px;
   transition: var(--transition-1);
   cursor: pointer;
+  box-shadow: -2px 4px 12px hsla(0, 0%, 0%, 0.15);
+  z-index: 1;
+}
+
+.contact-link-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--eerie-black-1);
+  border-radius: inherit;
+  z-index: -1;
 }
 
 .contact-link-wrapper:hover {
-  background: var(--bg-gradient-jet);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-2);
 }
 
 .contact-link-wrapper:hover .contact-link {
